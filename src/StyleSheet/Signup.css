@@ -1,0 +1,72 @@
+.signup {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.signup_left {
+  flex: 0.57;
+  background-image: url("https://app.getbasis.co/static/media/SignUpMainImage.40b78e4d.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.signup_right {
+  flex: 0.43;
+  height: 100vh;
+  text-align: center;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 2vmax;
+  cursor: pointer;
+}
+
+.signup_right .heading {
+  text-align: center;
+  margin-bottom: 2vmax;
+}
+
+.signup_right .heading p {
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px;
+  font-size: 22px;
+}
+
+.signup_form form {
+  width: 60%;
+}
+
+.signup_form form button {
+  background: #00c38c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.signup_form form button:hover {
+  background: #008b64;
+}
+
+.signup_form form a {
+  text-decoration: none;
+  color: #008b64;
+}
+
+@media screen and (max-width: 600px) {
+  .signup_left {
+    display: none;
+  }
+
+  .signup_right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .signup_form form {
+    width: 80%;
+  }
+}

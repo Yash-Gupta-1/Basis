@@ -1,0 +1,84 @@
+.login {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.login_left {
+  flex: 0.57;
+  background-image: url("https://app.getbasis.co/static/media/SignUpMainImage.40b78e4d.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.login_right {
+  flex: 0.43;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 2vmax;
+  cursor: pointer;
+}
+
+.login_right .heading {
+  text-align: center;
+  margin-bottom: 3vmax;
+}
+
+.login_right .heading p {
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px;
+  font-size: 22px;
+}
+
+.login_form form {
+  width: 60%;
+}
+
+.login_form form button {
+  background: #00c38c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.login_form form button:hover {
+  background: #008b64;
+}
+
+.login_form form a {
+  text-decoration: none;
+  color: #008b64;
+}
+
+.secure {
+  margin-top: 2vmax;
+  background: #afe6ce;
+  color: #299a96;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .login_left {
+    display: none;
+  }
+
+  .login_right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .login_form form {
+    width: 80%;
+  }
+}
