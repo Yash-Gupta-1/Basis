@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.link {
+  color: #008b64;
+  text-decoration: none;
+  cursor: pointer;
+}

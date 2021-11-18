@@ -1,0 +1,47 @@
+.home {
+  background: #edf3f3;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home .logout_btn {
+  background: #00c38c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 1vmax;
+}
+.home .logout_btn:hover {
+  background: #008b64;
+}
+
+.home_right img {
+  max-width: 80%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .home_left h4 {
+    font-size: 14px;
+  }
+
+  .home_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home_right img {
+    width: 60%;
+  }
+}
