@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { loadUser, logoutuser } from '../actions'
 import Header from '../Components/Header'
 import '../StyleSheet/Home.css'
@@ -8,6 +9,7 @@ import '../StyleSheet/Home.css'
 const Home = () => {
     const { user } = useSelector(state => state.user)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleLogout = () => {
         dispatch(logoutuser(user._id))
@@ -16,9 +18,9 @@ const Home = () => {
 
     useEffect(() => {
         if (user === null) {
-            window.location.replace('/login')
+            navigate('/login')
         }
-    }, [user])
+    }, [user, navigate])
 
     return (
         <Fragment>
