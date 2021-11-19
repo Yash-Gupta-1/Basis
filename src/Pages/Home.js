@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { logoutuser } from '../actions'
+import { loadUser, logoutuser } from '../actions'
 import Header from '../Components/Header'
 import '../StyleSheet/Home.css'
 
@@ -11,9 +11,14 @@ const Home = () => {
 
     const handleLogout = () => {
         dispatch(logoutuser(user._id))
+        dispatch(loadUser())
     }
 
-
+    useEffect(() => {
+        if (user === null) {
+            window.location.replace('/login')
+        }
+    }, [user])
 
     return (
         <Fragment>
