@@ -21,21 +21,22 @@ const Signup = () => {
                 firstName: data.firstname,
                 lastName: data.lastname,
                 email: basis_user_details.email,
-                referredCodeKey: "",
+                referredCodeKey: data.referal,
                 agreeToPrivacyPolicy: true,
                 token: basis_user_details.token,
                 source: "WEB_APP"
             }
 
             const result = await signupUser(obj)
-            localStorage.setItem("referalToken", result.results.user.referralToken)
             console.log('signup result', result);
+
+            localStorage.setItem("referalToken", result.results.user.referralToken)
             dispatch(registerUser(obj))
             if (isAuthenticated) {
                 window.location.replace('/')
             }
         } else {
-            toast.info("Enter a valid key or  leave it blank")
+            toast.info("Enter a valid referal or leave it blank")
         }
     }
 
